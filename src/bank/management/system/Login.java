@@ -17,38 +17,44 @@ public class Login extends JFrame implements ActionListener{
         
         setLayout(null);
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));//image path
         Image i2 = i1.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel label = new JLabel(i3);
         label.setBounds(70,10,100,100);
         add(label);
         
+        //welcome label
         JLabel text = new JLabel("WELCOME TO ATM");
         text.setFont(new Font("osward",Font.BOLD,38));
         text.setBounds(200,40,400,40);
         add(text);
         
+        //card no label
         JLabel cardno = new JLabel("Card No:");
         cardno.setFont(new Font("RALEWAY",Font.BOLD,38));
         cardno.setBounds(120,150,230,40);
         add(cardno);
         
+        //card no text field
         cardTextField = new JTextField();
         cardTextField.setBounds(300,150,230,30);
         cardTextField.setFont(new Font("Arial",Font.BOLD,14));
         add(cardTextField);
         
+        //pin label
         JLabel pin = new JLabel("PIN:");
         pin.setFont(new Font("osward",Font.BOLD,28));
         pin.setBounds(120,220,230,40);
         add(pin);
         
+        //password field
         pinTextField = new JPasswordField();
         pinTextField.setBounds(300,220,230,30);
         pinTextField.setFont(new Font("Arial",Font.BOLD,14));
         add(pinTextField);
         
+        //signin button
         login = new JButton("SIGN IN");
         login.setBounds(300,300,100,30);
         login.setBackground(Color.BLACK);
@@ -56,6 +62,7 @@ public class Login extends JFrame implements ActionListener{
         login.addActionListener(this);
         add(login);
         
+        //clear button
         clear = new JButton("CLEAR");
         clear.setBounds(430,300,100,30);
         clear.setBackground(Color.BLACK);
@@ -63,6 +70,7 @@ public class Login extends JFrame implements ActionListener{
         clear.addActionListener(this);
         add(clear);
         
+        //ssign up button
         signup = new JButton("SIGNUP");
         signup.setBounds(300,350,230,30);
         signup.setBackground(Color.BLACK);
@@ -71,9 +79,10 @@ public class Login extends JFrame implements ActionListener{
         add(signup);
 
 
-        
+        //color of background
         getContentPane().setBackground(Color.white);
         
+        //size and location of panel 
         setSize(800,480);
         setVisible(true);
         setLocation(350,200);
